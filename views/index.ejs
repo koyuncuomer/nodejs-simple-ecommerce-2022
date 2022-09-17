@@ -1,0 +1,60 @@
+<%- include('includes/head.ejs') %>
+    <%- include('includes/header-navigator.ejs') %>
+
+        <div class="slider-area">
+            <!-- Slider -->
+            <div class="block-slider block-slider4">
+                <ul class="" id="bxslider-home4">
+                    <li>
+                        <img src="img/h4-slide.png" alt="Slide">
+                    </li>
+                    <li><img src="img/h4-slide2.png" alt="Slide">
+                    </li>
+                    <li><img src="img/h4-slide3.png" alt="Slide">
+                    </li>
+                </ul>
+            </div>
+            <!-- ./Slider -->
+        </div> <!-- End slider area -->
+
+        <div class="maincontent-area">
+            <div class="zigzag-bottom"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="latest-product">
+                            <h2 class="section-title">Latest Products</h2>
+                            <div class="product-carousel">
+
+                                <% if (products.length) { for(let product of products){ %>
+
+                                    <div class="single-product">
+                                        <div class="product-f-image">
+                                            <img src="img/product-1.jpg" alt="">
+                                            <div class="product-hover">
+                                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                <a href="single-product/1" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            </div>
+                                        </div>
+
+                                        <h2><a href="single-product/1">
+                                                <%= product.title %>
+                                            </a></h2>
+
+                                        <div class="product-carousel-price">
+                                            <ins>$700.00</ins> <del>$100.00</del>
+                                        </div>
+                                    </div>
+
+                                    <% }} else { %>
+                                        <div>No Products</div>
+                                        <% } %>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End main content area -->
+
+        <%- include('includes/footer.ejs') %>

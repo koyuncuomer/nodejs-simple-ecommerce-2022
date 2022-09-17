@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-simple-ecommerce-2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koyuncuomer/nodejs-simple-ecommerce-2022.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "omerko",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3"
+  }
+}
