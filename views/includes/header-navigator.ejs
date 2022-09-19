@@ -5,7 +5,7 @@
                 <div class="col-md-8">
                     <div class="user-menu">
                         <ul>
-                            <li></li>
+                            <li><a href="/admin/add"></i>Admin Add Product</a></li>
                             <li></li>
                             <li></li>
                         </ul>
@@ -56,13 +56,16 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <% if (pageTitle==='Home Page') { %>
+                        <% if (pageTitle==='Home Page' ) { %>
                             <li class="active"><a href="/">Home Page</a></li>
                             <li><a href="shop">Products Page</a></li>
-                            <% } else { %>
+                            <% } else if (pageTitle==='Shop Page' ) { %>
                                 <li><a href="/">Home Page</a></li>
                                 <li class="active"><a href="shop">Products Page</a></li>
-                                <% } %>
+                                <% } else { %>
+                                    <li><a href="/">Home Page</a></li>
+                                    <li><a href="shop">Products Page</a></li>
+                                    <% } %>
                     </ul>
                 </div>
             </div>

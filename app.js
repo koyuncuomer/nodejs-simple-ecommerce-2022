@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 
 const rootDir = require('./utils/path');
 const customerRoutes = require('./routers/customer');
+const adminRoutes = require('./routers/admin');
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.use(express.static(path.join(rootDir, 'public')))
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(customerRoutes);
+app.use('/admin', adminRoutes);
+
 app.use((req, res) => {
     const viewsData = {
         pageTitle: '404',

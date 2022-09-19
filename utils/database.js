@@ -1,4 +1,4 @@
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
 
 const db = mysql.createPool({
     host: 'localhost',
@@ -7,12 +7,4 @@ const db = mysql.createPool({
     database: 'ecommerce'
 });
 
-module.exports = db.promise();
-
-/*
-db.execute(`select * from products`).then(([data,fields]) => {
-    console.log('database data ',data);
-}).catch((error) => {
-    console.log(error);
-});
-*/
+module.exports = db;
